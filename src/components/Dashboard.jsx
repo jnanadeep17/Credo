@@ -3,6 +3,15 @@ import { useState, useEffect, useRef } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 
+import addIcon from "/src/assets/add-icon.svg"
+import searchIcon from "/src/assets/search-icon.svg"
+import copyIcon from "/src/assets/copy-icon.svg"
+import editIcon from "/src/assets/edit-icon.svg"
+import trashBinIcon from "/src/assets/trash-bin-icon.svg"
+import closeIcon from "/src/assets/close-icon.svg"
+import eyeClosedIcon from "/src/assets/eye-closed-icon.svg"
+import eyeOpenIcon from "/src/assets/eye-open-icon.svg"
+import defaultGlobeIcon from "/src/assets/default-globe-icon.svg"
 const Dashboard = () => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -152,10 +161,10 @@ const Dashboard = () => {
         </div>
         <div className='flex my-3 md:my-0 flex-col gap-3 lg:items-end'>
           <button onClick={() => setIsOpen(true)} className="bg-slate-950 py-3 px-4 text-sm md:text-base font-bold text-white flex items-center justify-center gap-1 w-fit rounded-full hover:cursor-pointer">
-            <img className='w-6' src="/src/assets/add-icon.svg" alt="add-icon" />Add New Login
+            <img className='w-6' src={addIcon} alt="add-icon" />Add New Login
           </button>
           <div className='relative'>
-            <img className='w-6 absolute left-3 top-2' src="/src/assets/search-icon.svg" alt="" />
+            <img className='w-6 absolute left-3 top-2' src={searchIcon} alt="" />
             <input value={searchQuery} onChange={(e) => { setSearchQuery(e.target.value) }} className='bg-white pl-11 py-2 rounded-full shadow-[0px_0px_5px_0px_rgba(0,0,0,0.15)] w-70 md:w-90' type="text" placeholder='Search' />
           </div>
         </div>
@@ -203,7 +212,7 @@ const Dashboard = () => {
                           className="w-5 h-5 rounded-sm"
                           alt="favicon"
                           onError={(e) => {
-                            e.currentTarget.src = "/src/assets/default-globe-icon.svg";
+                            e.currentTarget.src = defaultGlobeIcon;
                           }}
                         />
 
@@ -219,7 +228,7 @@ const Dashboard = () => {
                           {login.email}
                         </span>
                         <span>
-                          <img onClick={() => copyToClipboard(login.email)} className="w-4 hover:cursor-pointer active:scale-85 transition-transform" src="/src/assets/copy-icon.svg" alt="copy-icon" />
+                          <img onClick={() => copyToClipboard(login.email)} className="w-4 hover:cursor-pointer active:scale-85 transition-transform" src={copyIcon} alt="copy-icon" />
                         </span>
                       </div>
                     </td>
@@ -230,7 +239,7 @@ const Dashboard = () => {
                           {login.username}
                         </span>
                         <span>
-                          <img onClick={() => copyToClipboard(login.username)} className="w-4 hover:cursor-pointer active:scale-85 transition-transform" src="/src/assets/copy-icon.svg" alt="copy-icon" />
+                          <img onClick={() => copyToClipboard(login.username)} className="w-4 hover:cursor-pointer active:scale-85 transition-transform" src={copyIcon} alt="copy-icon" />
                         </span>
                       </div>
                     </td>
@@ -241,7 +250,7 @@ const Dashboard = () => {
                           {visiblePasswordIndex === index ? login.password : "•".repeat(login.password.length)}
                         </span>
                         <span>
-                          <img onClick={() => copyToClipboard(login.password)} className="w-4 hover:cursor-pointer active:scale-85 transition-transform" src="/src/assets/copy-icon.svg" alt="copy-icon" />
+                          <img onClick={() => copyToClipboard(login.password)} className="w-4 hover:cursor-pointer active:scale-85 transition-transform" src={copyIcon} alt="copy-icon" />
                         </span>
                       </div>
                     </td>
@@ -256,8 +265,8 @@ const Dashboard = () => {
                           className="w-4"
                           src={
                             visiblePasswordIndex === index
-                              ? "/src/assets/eye-closed-icon.svg"
-                              : "/src/assets/eye-open-icon.svg"
+                              ? eyeClosedIcon
+                              : eyeOpenIcon
                           }
                           alt="eye-icon"
                         />{visiblePasswordIndex === index ? "Hide" : "View"}
@@ -265,7 +274,7 @@ const Dashboard = () => {
 
                       <button onClick={() => handleEdit(login.id)}
                         className="py-1 px-2 rounded-lg font-medium bg-[#e7fce7] hover:cursor-pointer flex w-full lg:w-fit gap-1  items-center">
-                        <img className="w-4" src="/src/assets/edit-icon.svg" alt="edit-icon.svg" />Edit
+                        <img className="w-4" src={editIcon} alt="edit-icon.svg" />Edit
                       </button>
 
                       <button
@@ -275,7 +284,7 @@ const Dashboard = () => {
                         }}
                         className="py-1 px-2 rounded-lg font-medium bg-[#fde2e2] hover:cursor-pointer w-20 lg:w-fit flex gap-1  items-center">
 
-                        <img className="w-4" src="/src/assets/trash-bin-icon.svg" alt="trash-bin-icon" />Delete
+                        <img className="w-4" src={trashBinIcon} alt="trash-bin-icon" />Delete
                       </button>
                     </td>
                   </tr>
@@ -292,7 +301,7 @@ const Dashboard = () => {
           <div className="bg-white z-90 p-5 rounded-2xl w-[95%] md:w-135">
             <div className="flex justify-between">
               <h1 className="text-2xl font-bold">Add New Login</h1>
-              <img onClick={() => { setIsOpen(false) }} className="w-5 hover:cursor-pointer" src="/src/assets/close-icon.svg" alt="close-icon" />
+              <img onClick={() => { setIsOpen(false) }} className="w-5 hover:cursor-pointer" src={closeIcon} alt="close-icon" />
             </div>
             <div className="flex flex-col gap-10 shadow-[0px_0px_5px_0px_rgba(0,0,0,0.2)] p-5 rounded-lg my-4">
               <div className="flex flex-col gap-1">

@@ -1,16 +1,66 @@
-# React + Vite
+# Credo - Password Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Credo** helps you store, manage, and protect all your passwords in one place. This is a modern, responsive frontend application built with **React** and **Vite**, designed to provide a secure and fast user experience for managing digital credentials locally.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## React Compiler
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+Ensure you have the following installed:
+* **Node.js** (v18.0.0 or higher)
+* **npm** (comes with Node.js) or **yarn**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation & Local Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/jnanadeep17/Credo.git](https://github.com/jnanadeep17/Credo.git)
+   ```
+
+2. **Navigate into the project directory**
+
+    ```bash
+    cd Credo
+    ```
+3. Install dependencies
+    ```bash
+    npm install
+    ```
+
+4. Start the development server
+    ```bash
+    npm run dev
+    ```
+
+5. Open your browser Navigate to http://localhost:5173 to see the app running.
+
+### Tech Stack
+- Frontend: React.js (Vite)
+
+- Styling: Tailwind CSS
+
+- Routing: React Router DOM
+
+- Notifications: React-Toastify
+
+- Icons: [SvgRepo](https://www.svgrepo.com/)
+
+### Key Features
+- Local Persistence: Data is stored securely in your browser's LocalStorage.
+
+- Real-time Search: Instantly find your credentials with a fast filtering system.
+
+- Copy to Clipboard: One-tap copying for emails, usernames, and passwords with visual feedback.
+
+- Responsive UI: Fully optimized for Mobile, Tablet, and Desktop views.
+
+### Project Structure
+- `/src/components`: UI components (Navbar, Dashboard, Hero, About)
+
+- `/src/assets`: Icons and images
+
+- `/src/App.jsx`: Main routing logic and global state

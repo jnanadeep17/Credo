@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@layer utilities {
+  .scrollbar-custom {
+    /* Set the width of the scrollbar */
+    &::-webkit-scrollbar {
+      width: 4px; /* This is your w-1 */
+    }
+
+    /* Style the track (background) */
+    &::-webkit-scrollbar-track {
+      background-color: #f3f4f6; /* gray-100 */
+      border-radius: 9999px;
+    }
+
+    /* Style the thumb (the moving part) */
+    &::-webkit-scrollbar-thumb {
+      background-color: #d1d5db; /* gray-300 */
+      border-radius: 9999px;
+    }
+
+    /* Dark mode variants */
+    .dark &::-webkit-scrollbar-track {
+      background-color: #ffffffcd;
+    }
+
+    .dark &::-webkit-scrollbar-thumb {
+      background-color: #d1d5db;
+    }
+  }
+}

@@ -1,4 +1,5 @@
-import React from 'react'
+import githubIcon from "/src/assets/github-icon.svg"
+import linkedInIcon from "/src/assets/linkedin-icon.svg"
 
 const About = () => {
   return (
@@ -36,10 +37,10 @@ const About = () => {
           </p>
           <div className='flex gap-2'>
             <a href="https://github.com/jnanadeep17" target="_blank">
-              <img src="/src/assets/github-icon.svg" alt="github-icon" className='w-7  hover:cursor-pointer' />
+              <img src={githubIcon} alt="github-icon" className='w-7  hover:cursor-pointer' />
             </a>
             <a href="https://www.linkedin.com/in/jnanadeep-r-3b924b384/" target="_blank">
-              <img src="/src/assets/linkedin-icon.svg" alt="linkedin-icon" onClick={() => alert("Eeyy")} className='w-7 rounded-[5px] bg-white hover:cursor-pointer' />
+              <img src={linkedInIcon} alt="linkedin-icon" className='w-7 rounded-[5px] bg-white hover:cursor-pointer' />
             </a>
           </div>
 

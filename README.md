@@ -18,7 +18,7 @@ Ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/jnanadeep17/Credo.git](https://github.com/jnanadeep17/Credo.git)
+   git clone https://github.com/jnanadeep17/Credo.git
    ```
 
 2. **Navigate into the project directory**
